@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Lesson 20</title>
+  </head>
+  <body>
+    <div class="container">
+      <div class="header">
+        <h1 class="title">User Management</h1>
+        <button class="newuser_btn" id="modal_opener">New User</button>
+      </div>
+
+      <table class="table">
+        <thead>
+          <tr>
+            <th>ID</th>
+            <th>Email</th>
+            <th>First_Name</th>
+            <th>Last_Name</th>
+            <th>Gender</th>
+            <th>Mobile</th>
+            <th>Personal Number</th>
+            <th>Zip code</th>
+            <th>Status</th>
+            <th>Actions</th>
+          </tr>
+        </thead>
+        <tbody id="table_body"></tbody>
+      </table>
+    </div>
+
+    <div class="modal" id="form_modal">
+      <div class="modal_content">
+        <button class="form_modal_closer" id="form_closer_btn">X</button>
+        <form
+          class="modal_form"
+          id="user-signup-form"
+          action="/save-user"
+          method="post"
+        >
+          <input id="user_id" type="hidden" />
+          <div class="form-field">
+            <label for="first_name">Enter First Name</label>
+            <input
+              id="first_name"
+              type="text"
+              placeholder="Enter First Name"
+              required=""
+              minlength="4"
+            />
+          </div>
+          <div class="form-field">
+            <label for="last_name">Enter Last name</label>
+            <input
+              id="last_name"
+              type="text"
+              placeholder="Enter Last name"
+              required=""
+            />
+          </div>
+          <div class="form-field">
+            <label for="mobile_number">Enter mobile</label>
+            <input
+              id="mobile_number"
+              type="number"
+              placeholder="Enter mobile"
+              required=""
+            />
+          </div>
+          <div class="form-field">
+            <label for="personal_number">Enter personal number</label>
+            <input
+              id="personal_number"
+              type="number"
+              placeholder="Enter personal number"
+              required=""
+            />
+          </div>
+          <div class="form-field">
+            <label for="zip">Enter Zip Code</label>
+            <input
+              id="zip"
+              type="text"
+              placeholder="Enter Zip Code"
+              required=""
+            />
+          </div>
+          <div class="form-field">
+            <label for="email">Enter Email</label>
+            <input
+              id="email"
+              type="email"
+              placeholder="Enter Email"
+              required=""
+            />
+          </div>
+          <div class="form-field">
+            <label for="status">Enter status</label>
+            <select id="status" required="">
+              <option value="">Choose Status</option>
+              <option value="active">Active</option>
+              <option value="inactive">InActive</option>
+            </select>
+          </div>
+          <div class="form-field">
+            <label for="gender">Enter gender</label>
+            <select id="gender" required="">
+              <option value="">Choose Gender</option>
+              <option value="male">Male</option>
+              <option value="female">Female</option>
+            </select>
+          </div>
+
+          <button type="submit" class="submit_btn">Submit</button>
+        </form>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
